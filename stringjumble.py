@@ -25,3 +25,26 @@ ydnah dnif yam uoy taht skcirt ro seuqinhcet wef a era erehT
 handy find may you that tricks or techniques few a are There
 erehT era a wef seuqinhcet ro skcirt taht uoy yam dnif ydnah
 """
+text = input("Please enter a string of text (the bigger the better): ")
+print('You entered "'+text+'". Now jumble it:')
+
+print(text[::-1])
+
+words = []
+word = ""
+for a in text:
+    if a == " ":
+        words.append(word)
+        word=""
+    else:
+        word = word + a
+
+words.append(word)
+
+for word in words[::-1]:
+    print(word, end=" ")
+
+print()
+
+for word in words:
+    print(word[::-1], end=" ")
